@@ -31,7 +31,8 @@ In the library, users are able to view a list of the books in the library,  view
 * The public API is based on the JSON:API Specification - https://jsonapi.org/
 * Displaying books on the main page should be as close as possible to the following layout:
 ![Main Page Books Layout](https://i.ibb.co/w77fHDw/Frontend-Lead-Position-Books-Layout.jpg)
-*Example of a book without any photos, and a book with photos. In case a book has more than one photo, the number of additional photos will be displayed as the example above*
+
+	*Example of a book without any photos, and a book with photos. In case a book has more than one photo, the number of additional photos will be displayed as the example above*
 
 **NOTE:** Except for the main page books display layout mentioned above, there are no additional UI-specific instructions.
 
