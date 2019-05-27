@@ -16,7 +16,8 @@ Please feel free to contact us by mailing *shlomi@rethinkedge.com* with any ques
 
 ## The Challenge
 The code challenge focuses on building web application (SPA) of a library! 📚
-In the library, users are able to view a list of the books in the library,  view all the photos of a single book, and add photos to books as-well.
+
+In the library, users are able to view a list of books, view all the photos of a single book, and add photos to books as-well.
 
 ### Specification
 
@@ -47,7 +48,7 @@ In the library, users are able to view a list of the books in the library,  view
 ### Things We Care About
 
 * Clean code
-* Decoupling logic and UI
+* Decoupling data, UI logic and UI presentation 
 * Documentation and comments
 * Componential and reusabillity thinking
 
