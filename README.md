@@ -23,7 +23,7 @@ In the library, users are able to view a list of books, view all the photos of a
 
 * The application contains 2 routes:
 	* Main page, displays a list of 5 books. Every book in the list will contain one of the book's photos (if the book has any photos), the book's title and author. 
-	* Single book page, which displays the book's title, author, all of the book's photos (if the book has any photos), and a form to add photo to the book.
+	* Single book page, which displays the book's title, author, all of the book's photos (if the book has any photos), and a form to add a photo to the book.
 * Clicking on one of the books from the main page should navigate to the book's page.
 * All of the relevant data will be sent and received from the public API http://jsonapiplayground.reyesoft.com/
 	* Fetching all books - GET http://jsonapiplayground.reyesoft.com/v2/books
@@ -42,7 +42,7 @@ In the library, users are able to view a list of books, view all the photos of a
 * You **must** use ReactJS
 * You **must** use ES6 and above JavaScript syntax
 * You **must** use a UI library (*of your choice*)
-* You **must** use a state management library (*of your choice*).
+* You **must** use a state management library (*of your choice*)
 * *Feel free* to use Starter Kits such as [Create React App](https://github.com/facebook/create-react-app)
 
 ### Things We Care About
@@ -59,7 +59,7 @@ In the library, users are able to view a list of books, view all the photos of a
 * Responsiveness
 * Tests
 * Linter (and more specifically - [Airbnb JavaScript style guide](https://github.com/airbnb/javascript)) 
-* Modern best practices/coding patterns.
+* Modern best practices/coding patterns
 * S.O.L.I.D Principles
 
 ## Feedback
