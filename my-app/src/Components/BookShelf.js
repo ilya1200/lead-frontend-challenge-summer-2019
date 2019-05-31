@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import Jumbotron from 'react-bootstrap/Jumbotron'
-import Carousel from 'react-bootstrap/Carousel'
+import Jumbotron from 'react-bootstrap/Jumbotron';
+import Carousel from 'react-bootstrap/Carousel';
 import Book from './Book';
 import axios from 'axios';
-import config from './config'
+import config from './config';
 
 class BookShelf extends Component {
     state = {
@@ -35,6 +35,7 @@ class BookShelf extends Component {
     render() {
         return (
             <Jumbotron>
+
                 <Carousel>
                     {
                         this.state.books.map(book => (
