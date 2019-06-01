@@ -1,0 +1,8 @@
+.book-info-card,
+.book-info-form{
+    box-shadow: 0 0 7px rgba(0,0,0,0.3);
+}
+
+.card-deck{
+    padding: 1rem;
+}

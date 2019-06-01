@@ -2,6 +2,7 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 import Badge from 'react-bootstrap/Badge'
 import { Link } from "react-router-dom";
+import '../Style/Book.css';
 
 function checkForAuthor(authorId, authors) {
     const bookAuthor = authors.filter(author => author.id === authorId);
@@ -41,13 +42,19 @@ const Book = (props) => {
                 book :props.bookDetails
              }
           }}>
-            <Card style={{
+            <Card border="secondary" className="book" style={{
                 backgroundImage: checkForPhotos(props.bookDetails.relationships.photos.data, props.photos)
             }}>
-                <Card.Title>{props.bookDetails.attributes.title}</Card.Title>
-                <Card.Text>
-                    {checkForAuthor(props.bookDetails.relationships.author.data.id, props.authors)}
-                </Card.Text>
+                <div className="book-content">
+                    <div className="book-content-center">
+                        <Card.Title>{props.bookDetails.attributes.title}</Card.Title>
+                        <Card.Text>
+                            {checkForAuthor(props.bookDetails.relationships.author.data.id, props.authors)}
+                        </Card.Text>
+                    </div>
+                    
+                </div>
+
 
                 {
                     

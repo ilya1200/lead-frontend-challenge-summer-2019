@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import Jumbotron from 'react-bootstrap/Jumbotron';
-import Carousel from 'react-bootstrap/Carousel';
 import Book from './Book';
 import axios from 'axios';
 import config from './config';
+
+import CardDeck from 'react-bootstrap/CardDeck';
+import '../Style/BookShelf.css';
 
 class BookShelf extends Component {
     state = {
@@ -15,18 +17,18 @@ class BookShelf extends Component {
     componentDidMount() {
 
         axios.all([
-            axios.get(config.fetchBook),
+            axios.get(config.fetchBooks),
             axios.get(config.fetchAuthors),
             axios.get(config.fetchPhotos)
         ])
             .then(axios.spread((resBooks, resAuthors, resPhotos) => {
 
 
-                this.setState({ 
+                this.setState({
                     authors: resAuthors.data.data,
                     books: resBooks.data.data,
-                    photos : resPhotos.data.data
-                 });
+                    photos: resPhotos.data.data
+                });
             }));
 
 
@@ -36,19 +38,18 @@ class BookShelf extends Component {
         return (
             <Jumbotron>
 
-                <Carousel>
+                <CardDeck className="book-shelf">
                     {
                         this.state.books.map(book => (
-                            <Carousel.Item key={book.id}>
-                                <Book bookDetails={book} 
+                            <Book key={book.id}
+                                bookDetails={book}
                                 authors={this.state.authors}
                                 photos={this.state.photos}
-                                ></Book>
-                            </Carousel.Item>
+                            ></Book>
                         ))
                     }
+                </CardDeck>
 
-                </Carousel>
             </Jumbotron>
         );
     }

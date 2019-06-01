@@ -1,0 +1,10 @@
+.book-shelf{
+    overflow-x: auto;
+    flex-flow: row;
+    padding-bottom: 10px;
+}
+
+.jumbotron{
+    height: 100vh;
+    margin: 0 0;
+}
