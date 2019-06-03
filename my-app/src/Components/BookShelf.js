@@ -9,23 +9,17 @@ import '../Style/BookShelf.css';
 
 class BookShelf extends Component {
     state = {
-        books: [],
-        authors: [],
-        photos: []
+        books: []
     }
 
     componentDidMount() {
 
         axios.all([
-            axios.get(config.fetchBooks),
-            axios.get(config.fetchAuthors),
-            axios.get(config.fetchPhotos)
+            axios.get(config.fetchBooks)
         ])
-            .then(axios.spread((resBooks, resAuthors, resPhotos) => {
+            .then(axios.spread((resBooks) => {
                 this.setState({
-                    authors: resAuthors.data.data,
-                    books: resBooks.data.data,
-                    photos: resPhotos.data.data
+                    books: resBooks.data.data
                 });
             }));
 
@@ -35,14 +29,11 @@ class BookShelf extends Component {
     render() {
         return (
             <Jumbotron>
-
                 <CardDeck className="book-shelf">
                     {
                         this.state.books.map(book => (
                             <Book key={book.id}
                                 bookDetails={book}
-                                authors={this.state.authors}
-                                photos={this.state.photos}
                             ></Book>
                         ))
                     }

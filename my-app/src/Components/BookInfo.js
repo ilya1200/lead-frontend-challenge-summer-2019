@@ -36,23 +36,18 @@ class BookInfo extends Component {
               "type": "photos",
               "id": this.uuidv4(),
               "attributes": {
-                "title": "Ember Hamster",
+                "title": "photo name",
                 "uri": this.state.newUrlPhoto
               }
             }
           };
-        
-        axios.post(config.addPhoto, newPhoto , {headers: {
+
+        axios.post(postAddress, newPhoto , {
+            headers: {
             'Content-Type': 'application/vnd.api+json',
             'Accept': 'application/vnd.api+json'
         }})
             .then((response) => {
-                axios.post(postAddress,response,{headers: {
-                    'Content-Type': 'application/vnd.api+json',
-                    'Accept': 'application/vnd.api+json'
-                }}).then((res) => {
-                    console.log(res);
-                })
                 this.setState(prevState=> {
                     return {
                         photos: [...prevState.photos, newPhoto.data], 
@@ -97,7 +92,7 @@ class BookInfo extends Component {
                         <Card.Body>
                             <Card.Title>{this.state.book.attributes.title}</Card.Title>
                             <Card.Text>
-                                {this.state.author}
+                                {this.state.author && this.state.author.length ?  this.state.author[0].attributes.name : ''}
                             </Card.Text>
                         </Card.Body>
                     </Card>
