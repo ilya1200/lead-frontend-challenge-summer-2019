@@ -8,3 +8,7 @@
     height: 100vh;
     margin: 0 0;
 }
+
+.book-shelf > a{
+    text-decoration: none;
+}
