@@ -22,8 +22,6 @@ class BookShelf extends Component {
             axios.get(config.fetchPhotos)
         ])
             .then(axios.spread((resBooks, resAuthors, resPhotos) => {
-
-
                 this.setState({
                     authors: resAuthors.data.data,
                     books: resBooks.data.data,
